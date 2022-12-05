@@ -30,4 +30,4 @@ adduser $username sudo
 mkdir /home/$username
 mkdir /home/$username/.ssh
 cp /home/ubuntu/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
-
+chown -R $username:$username /home/$username/.ssh/
