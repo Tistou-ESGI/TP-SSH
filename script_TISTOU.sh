@@ -23,7 +23,7 @@ useradd -d /home/$username $username
 
 #Ajout du user aux membres sudo
 
-adduser $username sudo
+usermod -aG sudo $username 
 
 #autorisation pour le user d'utiliser la clé ssh
 
