@@ -27,5 +27,7 @@ adduser $username sudo
 
 #autorisation pour le user d'utiliser la clé ssh
 
-cp /home/ubuntu/.ssh/authorized_keys /home/$username/.ssh/
+mkdir /home/$username
+mdir /home/$username/.ssh
+cp /home/ubuntu/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
 
