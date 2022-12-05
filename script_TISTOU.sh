@@ -8,9 +8,6 @@ cp ./config__files/ssh/sshd_config /etc/ssh/sshd_config
 cp ./config__files/ssh/Banner /etc/Banner
 
 
-# Redemarrer le service sshd 
-
-systemctl restart sshd 
 
 #Création d'un utilisateur
 
@@ -37,3 +34,7 @@ cp /home/ubuntu/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
 
 #on met le user propriétaire du  fichier contenant la clé 
 chown -R $username:$username /home/$username/.ssh/
+
+# Redemarrer le service sshd 
+
+systemctl restart sshd 
