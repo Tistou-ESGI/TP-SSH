@@ -18,8 +18,10 @@ systemctl restart sshd
 echo "INDIQUEZ le nom de l'utilisateur que vous souhaitez créer"
 read username
 
+echo "INDIQUEZ le mdp de l'utilisateur"
+read passwd
 
-useradd -d /home/$username $username
+useradd -d /home/$username -p $passwd $username
 
 #Ajout du user aux membres sudo
 
