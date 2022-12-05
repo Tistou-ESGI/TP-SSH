@@ -29,7 +29,11 @@ usermod -aG sudo $username
 
 #autorisation pour le user d'utiliser la clé ssh
 
+#on créé les repertoires du nouveau user
 mkdir /home/$username
 mkdir /home/$username/.ssh
+#on copie la clé utilisée par ubuntu
 cp /home/ubuntu/.ssh/authorized_keys /home/$username/.ssh/authorized_keys
+
+#on met le user propriétaire du  fichier contenant la clé 
 chown -R $username:$username /home/$username/.ssh/
